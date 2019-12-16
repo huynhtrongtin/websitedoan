@@ -65,12 +65,10 @@ export default {
     checkSheep: function() {
       const result = document.getElementById("checksheep").value;
       if (result === "12") {
-        console.log("đúng");
         this.showResultRight = true;
         this.showResultWrong = false;
         this.showModal = false;
       } else {
-        console.log("sai");
         this.showResultWrong = true;
         this.showResultRight = false;
         this.showModal = false;
