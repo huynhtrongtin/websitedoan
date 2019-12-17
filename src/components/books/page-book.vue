@@ -7,7 +7,7 @@
     <div class="book-content">
       <div
         class="book-content-item"
-        @click="showModalBook = !showModalBook"
+        @click="handleClickBook(book.id)"
         v-for="(book, index) in allBook"
         :key="`book-${index}`"
       >
@@ -23,8 +23,12 @@
           <span>{{ book.rate }} {{ book.comment }}</span>
         </div>
       </div>
-      <div class="modal" v-if="showModalBook">
-        <modal-book v-if="showModalBook"></modal-book>
+      <div class="modal">
+        <modal-book
+          v-if="showModalBook"
+          :book="selectedBook"
+          @close="showModalBook = false"
+        ></modal-book>
       </div>
     </div>
   </div>
@@ -40,8 +44,15 @@ export default {
   data() {
     return {
       showModalBook: false,
-      allBook
+      allBook,
+      selectedBook: {}
     };
+  },
+  methods: {
+    handleClickBook(id) {
+      this.showModalBook = true
+      this.selectedBook = this.allBook.filter(book => book.id === id)[0]
+    }
   }
 };
 </script>

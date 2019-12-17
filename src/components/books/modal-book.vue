@@ -1,25 +1,25 @@
 <template>
-  <div class="modal-book" v-if="showModalBook">
+  <div class="modal-book">
     <div
       class="modal-book-background"
-      @click="showModalBook = !showModalBook"
+      @click="handleCloseModal"
     ></div>
     <div class="modal-book-item">
       <div class="modal-book-item-img">
-        <img src="/book-item-1.jpg" alt="" />
+        <img :src="book.img" alt="" />
       </div>
       <div class="modal-book-content">
-        <h2>Giáo Trình Kỹ Thuật Lập Trình C Căn Bản Và Nâng Cao</h2>
-        <p>⭐⭐⭐⭐⭐ (5 nhận xét)</p>
-        <span>Tác giả: Nhiều tác giả </span>
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.rate}} {{ book.comment }}</p>
+        <span>Tác giả: {{ book.author }} </span>
         <span style="font-weight: bold;margin-left: 5vw;">Bìa mềm</span>
-        <p>Id:</p>
+        <p>Id: {{ book.id }}</p>
         <hr />
-        <h3 style="color: red;">1.500đ</h3>
+        <h3 style="color: red;">{{ book.price }}</h3>
         <p>
-          Tiết kiệm: <span style="color: red;">90% </span><span>(90.000đ)</span>
+          Tiết kiệm: <span style="color: red;">{{ book.onSale }} </span><span>({{ book.priceOnSale }})</span>
         </p>
-        <p>Giá thị trường: 92.000đ</p>
+        <p>Giá thị trường: {{ book.marketPrice }}</p>
         <hr />
         <div class="total-book">
           <button @click="countBookUpcrease">+</button>
@@ -28,7 +28,7 @@
         </div>
         <div class="book-buy">
           <a
-            href="https://tiki.vn/giao-trinh-ky-thuat-lap-trinh-c-can-ban-va-nang-cao-p1664525.html?src=search&2hi=1&keyword=lap%20trinh&_lc=Vk4wMzkwMTEwMTI%3D"
+            :href="book.link"
             target="_blank"
             ><button><i class="fas fa-shopping-cart"></i>Chọn mua</button></a
           >
@@ -49,11 +49,15 @@
 
 <script>
 export default {
+  props: {
+    book: {
+      type: Object,
+    }
+  },
   data() {
     return {
       count: 1,
       showHeartIcon: false,
-      showModalBook: true
     };
   },
   methods: {
@@ -62,6 +66,9 @@ export default {
     },
     countBookDecrease: function() {
       this.count -= 1;
+    },
+    handleCloseModal() {
+      this.$emit('close')
     }
   }
 };
