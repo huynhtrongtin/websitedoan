@@ -154,7 +154,7 @@
             script. Ví dụ như sau:
           </p>
           <div class="modal-post-image">
-            <img src="learn-to-code.jpg" alt="anh1" />
+            <img src="/Fundamentals-of-JavaScript-Part-2.png" alt="anh1" />
           </div>
           <h4>4. Tiếp cận vấn đề có thứ tự và luôn chú ý tới chi tiết</h4>
           <p>
@@ -178,7 +178,6 @@
 
 <script>
 import FooterBlog from "@/components/blog/footer-blog.vue";
-
 export default {
   data() {
     return {

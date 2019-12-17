@@ -6,7 +6,7 @@
       </div>
       <div class="question-container-content">
         <div class="question-container-content-left">
-          <p><b>0</b></p>
+          <p><b>1</b></p>
           <span>trả lời</span>
         </div>
         <div class="question-container-content-main">

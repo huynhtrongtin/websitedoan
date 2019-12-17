@@ -7,9 +7,8 @@
     </div>
     <div class="login-form">
       <div class="login-form-logo">
-        <router-link to="/"
-          ><img src="/img_avatar2.png" alt="logo" id="header-logo"
-        /></router-link>
+        <img src="/img_avatar2.png" alt="logo" id="header-logo"
+        />
       </div>
       <div class="login-form-content">
         <span><b>Đăng nhập</b></span>
@@ -112,7 +111,7 @@ export default {
     margin-left: -1vw;
 
     video {
-      width: 100%;
+      width: 103%;
     }
   }
 

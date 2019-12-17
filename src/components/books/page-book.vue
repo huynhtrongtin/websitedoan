@@ -51,37 +51,30 @@ export default {
   width: 100vw;
   text-align: center;
   font-family: sans-serif;
-
   .book-tile {
     h2 {
       font-size: 2.7em;
       font-family: monospace;
       font-weight: 300;
     }
-
     hr {
       width: 80vw;
       margin-top: 10vh;
     }
   }
-
   .book-content {
     display: flex;
     justify-content: flex-start;
-
     .book-content-item {
       font-family: cursive;
       width: 20vw;
       margin: 30px 30px;
-
       .book-content-item-text {
         text-align: left;
-
         span {
           color: #999;
         }
       }
-
       &:hover {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }

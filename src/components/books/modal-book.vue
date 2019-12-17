@@ -56,12 +56,10 @@ export default {
       showModalBook: true
     };
   },
-
   methods: {
     countBookUpcrease: function() {
       this.count += 1;
     },
-
     countBookDecrease: function() {
       this.count -= 1;
     }
@@ -80,7 +78,6 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: cursive;
-
   .modal-book-background {
     top: 0;
     left: 0;
@@ -93,7 +90,6 @@ export default {
     font-family: cursive;
     background-color: rgba(133, 128, 111, 0.5);
   }
-
   .modal-book-item {
     width: 80%;
     height: 80vh;
@@ -101,36 +97,30 @@ export default {
     background-color: #fff;
     display: flex;
     position: relative;
-
     .modal-book-item-img {
       height: 88%;
       margin: 5vh 3vw 0 3vw;
       border-right: 1px solid #333;
       padding-right: 5vw;
     }
-
     .modal-book-content {
       text-align: left;
       margin-top: 5vh;
-
       hr {
         width: 55vw;
         margin-left: -3vw;
       }
     }
-
     .total-book {
       width: 5.8vw;
       display: flex;
       border: 1px solid #999;
       margin-right: 10vw;
-
       button {
         height: 3.5vh;
         border-top: none;
         border-bottom: none;
       }
-
       p {
         height: 3.5vh;
         margin: 0 1vw;
@@ -139,7 +129,6 @@ export default {
     }
     .book-buy {
       margin-left: 16vw;
-
       button {
         width: 20vw;
         height: 7vh;
@@ -148,28 +137,23 @@ export default {
         background-color: #ff3945;
         font-size: 1.2em;
         color: #fff;
-
         &:hover {
           opacity: 0.8;
         }
-
         i {
           margin-right: 1vw;
         }
       }
-
       #heart-icon {
         margin-left: 3vw;
         font-size: 2em;
         color: #999;
-
         &:hover {
           color: #ff3945;
         }
       }
     }
   }
-
   .modal-background {
     width: 100%;
   }

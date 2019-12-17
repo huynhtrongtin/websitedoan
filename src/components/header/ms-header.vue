@@ -8,8 +8,6 @@
         <li><router-link to="/">TRANG CHỦ</router-link></li>
         <li><router-link to="/tuts">VIDEO</router-link></li>
         <li><a href="/book">SÁCH</a></li>
-        <li><a href="#">SUCCESS STORIES</a></li>
-        <li><a href="#">MENTORS</a></li>
         <li><a href="/blog">BLOG</a></li>
         <li><a href="/question">HỎI ĐÁP</a></li>
       </ul>
